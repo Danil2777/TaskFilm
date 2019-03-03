@@ -1,12 +1,12 @@
 <template>
-  <div class="film-info">
-    <div class="wrapper-detail h-100">
-      <div class="box m-3">
+  <div class="container-fluid film-info">
+    <div class="row wrapper-detail h-100">
+      <div class="col-xs-12 col-lg-3 p-3 box">
         <button @click="back" class="btn btn-success m-2">Вернуться к поиску</button>
         <img v-if="film.Poster !== 'N/A'" :src="film.Poster">
         <img v-if="film.Poster == 'N/A'" class="no-image" src="/img/no.gif">
       </div>
-      <div class="m-3 w-100">
+      <div class="col-xs-12 col-lg-9 p-3  w-100">
         <table class="table table-striped table-dark">
           <tbody>
             <tr>
