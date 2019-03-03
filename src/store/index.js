@@ -13,6 +13,7 @@ export default new Vuex.Store({
     },
     mutations:{
         list(state){
+          if(state.search != ''){
           HTTP.get(Routes.getList, {
               params: {
                 apikey: "1977b733",
@@ -29,6 +30,7 @@ export default new Vuex.Store({
               .catch(error => {
                 console.log(error);
               });
+            }
         },
         search(state, inputValue){
           state.search = inputValue
